@@ -59,7 +59,7 @@
     "pnpm": ">9"
   },
   "main": "lib/index.js",
-  "license": "Apache-2.0",
+  "license": "UNLICENSED",
   "publishConfig": {
     "access": "public"
   },

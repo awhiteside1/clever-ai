@@ -47,4 +47,3 @@ jspm_packages/
 !/pnpm-workspace.yaml
 !/.syncpackrc.json
 !/.projenrc.ts
-!/LICENSE
