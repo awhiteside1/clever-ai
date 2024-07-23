@@ -6,7 +6,7 @@ const project = new monorepo.MonorepoTsProject({
   packageManager: javascript.NodePackageManager.PNPM,
   pnpmVersion:'>=9',
   projenrcTs: true,
-  gitignore:['.idea/'],
+  gitignore:['.idea/*'],
   licenseOptions:{disableDefaultLicenses:true},
   licensed:false
 });
