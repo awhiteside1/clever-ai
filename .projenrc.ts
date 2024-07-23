@@ -4,6 +4,10 @@ const project = new monorepo.MonorepoTsProject({
   devDeps: ["@aws/pdk"],
   name: "clever-ai",
   packageManager: javascript.NodePackageManager.PNPM,
+  pnpmVersion:'9',
   projenrcTs: true,
+  gitignore:['.idea/']
 });
+
+project.package.addEngine('pnpm', '>9')
 project.synth();
