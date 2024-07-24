@@ -1,15 +1,27 @@
+import { MonorepoTsProject } from "@aws/pdk/monorepo";
 import { javascript } from "projen";
-import { monorepo } from "@aws/pdk";
-const project = new monorepo.MonorepoTsProject({
+import { PythonProject } from "projen/lib/python";
+const monorepo = new MonorepoTsProject({
   devDeps: ["@aws/pdk"],
   name: "clever-ai",
   packageManager: javascript.NodePackageManager.PNPM,
-  pnpmVersion:'>=9',
+  pnpmVersion: "9",
   projenrcTs: true,
-  gitignore:['.idea/*'],
-  licenseOptions:{disableDefaultLicenses:true},
-  licensed:false
+  gitignore: [".idea/*"],
+  licenseOptions: { disableDefaultLicenses: true },
+  licensed: false,
 });
 
-project.package.addEngine('pnpm', '>9')
-project.synth();
+monorepo.package.addEngine("pnpm", ">=9");
+
+new PythonProject({
+  parent: monorepo,
+  authorEmail: "admin@alexwhiteside.dev",
+  authorName: "Alex Whiteside",
+  moduleName: "clever-ai",
+  name: "python",
+  outdir: "packages/python",
+  version: "0.0.1",
+});
+
+monorepo.synth();

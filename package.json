@@ -11,6 +11,7 @@
     "package": "pnpm exec projen package",
     "post-compile": "pnpm exec projen post-compile",
     "post-upgrade": "pnpm exec projen post-upgrade",
+    "postinstall": "pnpm exec projen postinstall",
     "pre-compile": "pnpm exec projen pre-compile",
     "run-many": "pnpm exec projen run-many",
     "test": "pnpm exec projen test",
@@ -56,7 +57,7 @@
   },
   "engines": {
     "node": ">=16",
-    "pnpm": ">9"
+    "pnpm": ">=9"
   },
   "main": "lib/index.js",
   "license": "UNLICENSED",
