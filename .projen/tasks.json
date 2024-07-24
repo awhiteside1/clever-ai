@@ -206,7 +206,7 @@
       "description": "Upgrade dependencies in the monorepo for all affected projects",
       "steps": [
         {
-          "exec": "pnpm exec nx run-many --target=upgrade --output-style=stream --nx-bail --projects=python",
+          "exec": "pnpm exec nx run-many --target=upgrade --output-style=stream --nx-bail --projects=python,docs",
           "receiveArgs": true
         },
         {

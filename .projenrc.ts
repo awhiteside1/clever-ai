@@ -1,6 +1,7 @@
 import { MonorepoTsProject } from "@aws/pdk/monorepo";
-import { javascript } from "projen";
+import { javascript, Project } from "projen";
 import { PythonProject } from "projen/lib/python";
+
 const monorepo = new MonorepoTsProject({
   devDeps: ["@aws/pdk"],
   name: "clever-ai",
@@ -22,6 +23,12 @@ new PythonProject({
   name: "python",
   outdir: "packages/python",
   version: "0.0.1",
+});
+
+new Project({
+  parent: monorepo,
+  name: "docs",
+  outdir: "docs",
 });
 
 monorepo.synth();
