@@ -8,11 +8,11 @@ While LLMs appear very capable, it's important to remember they have no understa
 
 There's a minigame from 'The Price is Right' called Plinko. To play Plinko, a ball is dropped from the top of a tall, upright board filled with pegs. As the ball falls, it bounces off the pegs until it lands in one of several slots at the bottom, each with a different prize.
 
-![img_4.png](assets/plinko.png)
+![img_4.png](../plans/assets/plinko.png)
 
 LLMs form their responses by playing consecutive rounds of "extreme" Plinko - where instead of money, the winning slot decides which characters (token) to say next. For example, here's how a poorly trained, 28 parameter (pegs) LLM would decide how to respond.
 
-![img.png](assets/response.png)
+![img.png](../plans/assets/response.png)
 
 How we influence the probabilities of a model's responses, is by scaling how many parameters (pegs) and modifying each parameter (training).
 
@@ -20,7 +20,7 @@ To train an LLM, we can tune each of the pegs (parameters) on the board to influ
 
 Using many examples and a lot of GPU time, we eventually ~~hammer the model into submission~~  determine a set of parameters (pegs) that pass all of our tests. These are a model's weights.
 
-![img_4.png](img_4.png)
+![img_4.png](../plans/assets/llm_plinko.png)
 
 All it takes for this LLM Plinko Player to quote shakespear is to add more pegs (parameters). 80,000,000,000 more should do it. After a month and $20 million of training, you'll have the weights you need (200GB+) to generate sequences of probable characters for any input you want.
 
