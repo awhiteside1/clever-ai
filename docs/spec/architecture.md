@@ -9,8 +9,9 @@
 
 ## System Design
 
-Clever will compose four primary systems: Platform, Knowledge, Idea Generation, and Experiences, which allow for minimal
-dependencies and clear interfaces.
+Clever will compose four primary systems: Platform, Knowledge, Idea Generation, and Experiences, which allow
+for minimal
+dependencies and clear interfaces, as well as a framework runtime to integrate them.
 
 ```mermaid
 flowchart BT
