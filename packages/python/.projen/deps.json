@@ -1,6 +1,18 @@
 {
   "dependencies": [
     {
+      "name": "ollama",
+      "type": "runtime"
+    },
+    {
+      "name": "torch",
+      "type": "runtime"
+    },
+    {
+      "name": "transformers",
+      "type": "runtime"
+    },
+    {
       "name": "pytest",
       "version": "7.4.3",
       "type": "test"

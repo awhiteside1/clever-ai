@@ -1,0 +1,2 @@
+schema: https://dgraph-public.default.svc.cluster.local:8080/graphql/
+documents: '**/*.graphql'

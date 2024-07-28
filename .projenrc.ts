@@ -17,12 +17,17 @@ monorepo.package.addEngine("pnpm", ">=9");
 
 new PythonProject({
   parent: monorepo,
+  venv: true,
+  venvOptions: {
+    envdir: ".venv",
+  },
   authorEmail: "admin@alexwhiteside.dev",
   authorName: "Alex Whiteside",
   moduleName: "clever-ai",
   name: "python",
   outdir: "packages/python",
   version: "0.0.1",
+  deps: ["ollama", "torch", "transformers"],
 });
 
 new Project({
