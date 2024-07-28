@@ -86,13 +86,3 @@ descriptions about many distinct services which need to be implemented.
 Within each folder, there will be an `index.md` containing information that applies to all subclasses, as well as
 interfaces they must implements and common behaviors. All other files in the folder are each individual, specific
 subclasses which describe their own additional behaviors, methods, and purposes.
-
-
-
-
-
-
-
-
-
-

@@ -9,33 +9,19 @@ APIs, and the purpose of the discussion.
 
 ```ts
 interface FrameworkApis {
-  events: EventsApi;
-  facts: FactsApi;
-  unknowns: UnknownsApi;
+  events: EventsApi
+  facts: FactsApi
+  unknowns: UnknownsApi
 }
 
 interface DiscussionContext {
-  apis: FrameworkApis;
-  discussion: Discussion;
-  project: Project;
-  purpose: string;
+  apis: FrameworkApis
+  discussion: Discussion
+  project: Project
+  purpose: string
 }
-
 
 abstract class Service {
-
-
-  constructor(private context: DiscussionOptions) {
-
-
-  }
-
-
+  constructor(private context: DiscussionOptions) {}
 }
-
 ```
-
-
-
-
-

@@ -41,8 +41,8 @@ Orchestration framework and interface definitions to
 facilitate problem and idea management at runtime by all registered servies.
 
 - a generic, pluggable workflow to generate ideas, extendable for context
-    - Interfaces for services, events, discussions
-    - Capabilities to manage Facts, Unknowns
+  - Interfaces for services, events, discussions
+  - Capabilities to manage Facts, Unknowns
 
 ### Knowledge will provide
 
@@ -60,7 +60,7 @@ Knowledge will ingest and maintain knowledge graphs and relavent data.
 - Services for Problems, Ideas, and Communication
 - Project level generation of problems, rules, evaluation criteria
 - Idea generation and evaluation capabilities
-    - Catalog of methodologies and mental models
+  - Catalog of methodologies and mental models
 - Feedback mechanisms and persistence of problems, ideas and chats
 
 ### Experiences
@@ -69,9 +69,9 @@ Users will interact
 with Experiences on their device which then leverage the rest of the system. Providing,
 
 - Web / Mobile / Apps for users
-    - Signup/Projects/Link Resources/All Features available
-    - Transparency into knowledge and resources
-    - See generated ideas / discussions in chat form
+  - Signup/Projects/Link Resources/All Features available
+  - Transparency into knowledge and resources
+  - See generated ideas / discussions in chat form
 - API for integrations with tools for in context ideas
 - Many simple integrations to bring ideas to where the user is
 - An idea generation service which allows the user to take part in discussions and maintains a connection to the client

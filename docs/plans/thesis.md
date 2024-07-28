@@ -19,10 +19,10 @@ LLMs make it cheap to create viable ideas at scale
 - Extract context from many sources
 - Combine with inspiration / good examples
 - Create complete, judge-able ideas that can be evaluated by humans
-    - Tinder swiping
-    - Deep dive
+  - Tinder swiping
+  - Deep dive
 
 Many tools / ecosystems exist that enable convenient use of such idea generation
 
 - many outputs modalities now available and ever growing
-- 
+-

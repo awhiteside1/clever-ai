@@ -53,4 +53,4 @@ Refer to [Concepts](./concepts.md) for a list of domain concepts
 
 ### Architecture
 
-Refer to [Architecture](./architecture.md) for a technical design 
+Refer to [Architecture](./architecture.md) for a technical design

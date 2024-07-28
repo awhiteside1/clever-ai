@@ -59,7 +59,7 @@ and update when they are changed.
 
 Methodologies are holistic approaches to solving problems that are defined by experts and backed by empirical data. They
 may vary in the types of problems they are relavent for, specificity in steps, and required information. Examples
-include  "Design Double Diamond", "First Principals Thinking", "Second Order Effects", and "Design by wishful thinking".
+include "Design Double Diamond", "First Principals Thinking", "Second Order Effects", and "Design by wishful thinking".
 
 We will maintain a system catalog of the best methodologies that cover a variety of problems, which will be used to
 generate ideas.
@@ -68,7 +68,4 @@ generate ideas.
 
 Discussions are chat threads about a particular problem, idea, or need the user has within the context of a project.
 Discussions are freeform chat format, are independent form other discussions unless the user references a prior chat,
-and provide an interactive brainstorming/idea session to help the user. 
-
-
-
+and provide an interactive brainstorming/idea session to help the user.

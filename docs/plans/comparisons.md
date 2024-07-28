@@ -16,5 +16,3 @@ actual reasoning or logic.
 
 ChatGPT is a general purpose chatbot that provides a very un-opinionated, bare bones access to the models in scoped
 chat threads. It has limited integrations available for consumers.
- 
-

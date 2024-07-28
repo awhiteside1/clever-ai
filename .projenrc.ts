@@ -10,7 +10,14 @@ const monorepo = new MonorepoTsProject({
   prettierOptions: {
     settings: { semi: false, singleQuote: true },
     ignoreFileOptions: {
-      ignorePatterns: ['**/.venv/**'],
+      ignorePatterns: [
+        '**/.venv/**',
+        '**/project.json',
+        '**/nx.json',
+        '**/package.json',
+        '**/tsconfig*',
+        '.*',
+      ],
     },
   },
   projenrcTs: true,

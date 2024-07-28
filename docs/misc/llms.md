@@ -18,7 +18,7 @@ How we influence the probabilities of a model's responses, is by scaling how man
 
 To train an LLM, we can tune each of the pegs (parameters) on the board to influence the outcomes (token). Parameters are not limited to shape and size, and can vary based on input and previously generated tokens - the sky is the limit. This tuning process is how the machine "learns", and results in parameters beyond our understanding.
 
-Using many examples and a lot of GPU time, we eventually ~~hammer the model into submission~~  determine a set of parameters (pegs) that pass all of our tests. These are a model's weights.
+Using many examples and a lot of GPU time, we eventually ~~hammer the model into submission~~ determine a set of parameters (pegs) that pass all of our tests. These are a model's weights.
 
 ![img_4.png](../plans/assets/llm_plinko.png)
 
@@ -53,8 +53,3 @@ When possible, break apart complex flows that perform multiple steps - i.e. extr
 While convenient, uses like this will behave inconsistently and be difficult to debug. The model must predict the combined outcome of two activities which will be less refined than each activity individually.
 
 By breaking it apart, you end up with more observable, testable and working code.
-
-
-
-
-

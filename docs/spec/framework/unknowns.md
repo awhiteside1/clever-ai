@@ -6,7 +6,6 @@ facts.
 ## Structure
 
 ```ts
-
 interface Unknown {
   parent?: Unknown
   kind: 'Idea' | 'Problem' | 'Context' | 'Clarification'
@@ -18,10 +17,11 @@ interface ActiveUnknown {
   requestedAt: number
   requestedBy: Service
   unknown: Unknown
-  activity: Record<Service, 'unsupported' | 'blocked' | 'running' | 'failed' | 'succeeded'>
+  activity: Record<
+    Service,
+    'unsupported' | 'blocked' | 'running' | 'failed' | 'succeeded'
+  >
 }
-
-
 ```
 
 ## API
@@ -33,4 +33,3 @@ Creates a new Unknown and alerts appropriate services
 ### respond(status, details)
 
 updates an unknown from the perspective of a single service
-

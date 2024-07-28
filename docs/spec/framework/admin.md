@@ -12,4 +12,3 @@ for the discussion and access scope.
 ### Handles Errors
 
 Should a service not respond, conflict, etc, the runtime will restart the discussion and communicate the error
-

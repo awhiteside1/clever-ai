@@ -8,8 +8,6 @@ basic Event object which can be extended by other APIs for specific events.
 The core event structure is as follows, extended by specific events, which may define additional properties.
 
 ```ts
-
-
 interface Event {
   timestamp: number
   kind: string
@@ -19,7 +17,6 @@ interface Event {
   complete: boolean
   artifacts: Artifact[]
 }
-
 ```
 
 ## Event API
@@ -35,11 +32,3 @@ requests a callback whenever certain matching events are reported
 ### query(EventCriteria)
 
 queries all discussion events for matching events
-
-
-
-
-
-
-
-

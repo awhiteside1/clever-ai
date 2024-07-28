@@ -28,7 +28,7 @@ Perform a generation via CLI using an MLX model
 
 ```shell
  mlx_lm.generate --model ./mlx_model  --max-tokens=10000  --prompt "Draft a W3C specification on a human specification. Do not omit any details."
- ```
+```
 
 ### Server
 

@@ -27,7 +27,7 @@ Resulting in the best ideas humanity would probably come up with for this situat
 1. Prompt an LLM:
 
 > “Given **Context**, Apply **Methodology X** to **Problem** to form an **Idea** that will result in **Desired Outcomes
-**. Always follow **Rules**, Consider **Priorities**. Show your work step by step, then output the result as JSON.”
+> **. Always follow **Rules**, Consider **Priorities**. Show your work step by step, then output the result as JSON.”
 
 2. Cajole the output into valid format.
 
@@ -61,8 +61,4 @@ Hundreds of methods, applied to your particular need. Constantly growing.
 
 ### Inspiration Strikes
 
-Find something you really, really like? Snap a pic, jot a note, or paste a link. We'll make sure to let you know if the stars align. 
-
-
-
- 
+Find something you really, really like? Snap a pic, jot a note, or paste a link. We'll make sure to let you know if the stars align.

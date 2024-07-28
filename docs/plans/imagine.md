@@ -47,5 +47,3 @@ Leverage ways of thinking from humanity's best and brightest, applied to your pa
 - Mental Models
 - Business leaders
 - Industry Knowledge
-
-

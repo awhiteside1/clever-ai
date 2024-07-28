@@ -29,4 +29,3 @@ rejects an existing fact
 ### get(FactCriteria)
 
 gets all known facts that match
-

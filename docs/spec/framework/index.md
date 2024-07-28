@@ -25,5 +25,3 @@ Should a service not respond, conflict, etc, the runtime will restart the discus
 - [Unknowns API](./unknowns.md)
 - [Services](./services.md)
 - [Admin](./admin.md)
-
-
