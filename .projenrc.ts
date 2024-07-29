@@ -6,7 +6,7 @@ import { PythonProject } from "projen/lib/python";
 
 // @ts-ignore
 const monorepo = new MonorepoTsProject({
-  devDeps: ["@aws/pdk"],
+  devDeps: ["@aws/pdk", "prettier-plugin-tailwindcss"],
   deps: [
     "@headlessui/react",
     "@headlessui/tailwindcss",
@@ -19,6 +19,8 @@ const monorepo = new MonorepoTsProject({
     "framer-motion",
     "next",
     "react",
+    "@vercel/analytics",
+    "@vercel/analytics",
     "react-dom",
     "tailwindcss",
     "typescript",
@@ -42,7 +44,7 @@ const monorepo = new MonorepoTsProject({
     }
   },
   projenrcTs: true,
-  gitignore: [".idea/*", "**/.DS_Store"],
+  gitignore: [".idea/", "**/.DS_Store", "**/.next/"],
   licenseOptions: { disableDefaultLicenses: true },
   licensed: false,
   tsconfig: {

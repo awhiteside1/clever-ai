@@ -1,7 +1,7 @@
 import { type Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import clsx from 'clsx'
-
+import { Analytics } from '@vercel/analytics/react'
 import '@/styles/tailwind.css'
 
 const inter = Inter({
@@ -12,11 +12,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Pocket',
-    default: 'Pocket - Invest at the perfect time.',
+    template: '%s - Clever AI',
+    default: 'Clever AI - Your ideas, Amplified',
   },
   description:
-    'By leveraging insights from our network of industry insiders, you’ll know exactly when to buy to maximize profit, and exactly when to sell to avoid painful losses.',
+    "Leverage humanity's understanding to solve your problems and improve your decisions. ",
 }
 
 export default function RootLayout({
@@ -27,6 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={clsx('bg-gray-50 antialiased', inter.variable)}>
       <body>{children}</body>
+      <Analytics />
     </html>
   )
 }

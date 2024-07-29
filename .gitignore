@@ -29,8 +29,9 @@ jspm_packages/
 .yarn-integrity
 .cache
 .tmp
-.idea/*
+.idea/
 **/.DS_Store
+**/.next/
 !/.prettierignore
 !/.prettierrc.json
 !/.npmrc

@@ -28,6 +28,10 @@
       "type": "build"
     },
     {
+      "name": "prettier-plugin-tailwindcss",
+      "type": "build"
+    },
+    {
       "name": "projen",
       "version": "^0.82.8",
       "type": "build"
@@ -92,6 +96,10 @@
     },
     {
       "name": "@types/react-dom",
+      "type": "runtime"
+    },
+    {
+      "name": "@vercel/analytics",
       "type": "runtime"
     },
     {
