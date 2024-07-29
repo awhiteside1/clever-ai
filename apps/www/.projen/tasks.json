@@ -23,7 +23,12 @@
     },
     "compile": {
       "name": "compile",
-      "description": "Only compile"
+      "description": "Only compile",
+      "steps": [
+        {
+          "exec": "pnpm next build"
+        }
+      ]
     },
     "default": {
       "name": "default",
