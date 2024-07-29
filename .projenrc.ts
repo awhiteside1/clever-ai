@@ -117,6 +117,7 @@ const www = new NodeProject({
   defaultReleaseBranch: "main"
 });
 
+www.compileTask.reset("pnpm next build");
 www.addTask("dev", { exec: "pnpm next dev" });
 
 
