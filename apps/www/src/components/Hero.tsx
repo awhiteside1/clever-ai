@@ -1,23 +1,23 @@
-import { useId } from 'react'
-import Image from 'next/image'
-import clsx from 'clsx'
+import { useId } from "react";
+import Image from "next/image";
+import clsx from "clsx";
 
-import { AppDemo } from '@/components/AppDemo'
-import { AppStoreLink } from '@/components/AppStoreLink'
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import { PhoneFrame } from '@/components/PhoneFrame'
-import logoBbc from '@/images/logos/bbc.svg'
-import logoCbs from '@/images/logos/cbs.svg'
-import logoCnn from '@/images/logos/cnn.svg'
-import logoFastCompany from '@/images/logos/fast-company.svg'
-import logoForbes from '@/images/logos/forbes.svg'
-import logoHuffpost from '@/images/logos/huffpost.svg'
-import logoTechcrunch from '@/images/logos/techcrunch.svg'
-import logoWired from '@/images/logos/wired.svg'
+import { AppDemo } from "@/components/AppDemo";
+import { AppStoreLink } from "@/components/AppStoreLink";
+import { Button } from "@/components/Button";
+import { Container } from "@/components/Container";
+import { PhoneFrame } from "@/components/PhoneFrame";
+import logoBbc from "@/images/logos/bbc.svg";
+import logoCbs from "@/images/logos/cbs.svg";
+import logoCnn from "@/images/logos/cnn.svg";
+import logoFastCompany from "@/images/logos/fast-company.svg";
+import logoForbes from "@/images/logos/forbes.svg";
+import logoHuffpost from "@/images/logos/huffpost.svg";
+import logoTechcrunch from "@/images/logos/techcrunch.svg";
+import logoWired from "@/images/logos/wired.svg";
 
-function BackgroundIllustration(props: React.ComponentPropsWithoutRef<'div'>) {
-  let id = useId()
+function BackgroundIllustration(props: React.ComponentPropsWithoutRef<"div">) {
+  let id = useId();
 
   return (
     <div {...props}>
@@ -82,10 +82,10 @@ function BackgroundIllustration(props: React.ComponentPropsWithoutRef<'div'>) {
         </defs>
       </svg>
     </div>
-  )
+  );
 }
 
-function PlayIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function PlayIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
       <circle cx="12" cy="12" r="11.5" stroke="#D4D4D4" />
@@ -95,7 +95,7 @@ function PlayIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         stroke="#A3A3A3"
       />
     </svg>
-  )
+  );
 }
 
 export function Hero() {
@@ -105,12 +105,10 @@ export function Hero() {
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
             <h1 className="text-4xl font-medium tracking-tight text-gray-900">
-              Invest at the perfect time.
+              Amplify your ideas with AI.
             </h1>
             <p className="mt-6 text-lg text-gray-600">
-              By leveraging insights from our network of industry insiders,
-              you’ll know exactly when to buy to maximize profit, and exactly
-              when to sell to avoid painful losses.
+              Leverage ways of thinking from humanity's best and brightest, applied to your particular need, and thoughtfully considered based on your data, feedback and project.
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
               <AppStoreLink />
@@ -140,16 +138,16 @@ export function Hero() {
               className="mx-auto mt-8 flex max-w-xl flex-wrap justify-center gap-x-10 gap-y-8 lg:mx-0 lg:justify-start"
             >
               {[
-                ['Forbes', logoForbes],
-                ['TechCrunch', logoTechcrunch],
-                ['Wired', logoWired],
-                ['CNN', logoCnn, 'hidden xl:block'],
-                ['BBC', logoBbc],
-                ['CBS', logoCbs],
-                ['Fast Company', logoFastCompany],
-                ['HuffPost', logoHuffpost, 'hidden xl:block'],
+                ["Forbes", logoForbes],
+                ["TechCrunch", logoTechcrunch],
+                ["Wired", logoWired],
+                ["CNN", logoCnn, "hidden xl:block"],
+                ["BBC", logoBbc],
+                ["CBS", logoCbs],
+                ["Fast Company", logoFastCompany],
+                ["HuffPost", logoHuffpost, "hidden xl:block"]
               ].map(([name, logo, className]) => (
-                <li key={name} className={clsx('flex', className)}>
+                <li key={name} className={clsx("flex", className)}>
                   <Image src={logo} alt={name} className="h-8" unoptimized />
                 </li>
               ))}
@@ -158,5 +156,5 @@ export function Hero() {
         </div>
       </Container>
     </div>
-  )
+  );
 }
