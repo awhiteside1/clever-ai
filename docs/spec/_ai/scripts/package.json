@@ -1,0 +1,22 @@
+{
+  "name": "scripts",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/prepareContext.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.16.2",
+    "@types/fs-extra": "^11.0.4"
+  },
+  "dependencies": {
+    "radash": "^12.1.0",
+    "@modelfusion/vercel-ai": "^1.1.0",
+    "ai": "^3.2.37",
+    "fs-extra": "^11.2.0",
+    "modelfusion": "^0.137.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
