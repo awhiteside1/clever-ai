@@ -30,6 +30,7 @@ jspm_packages/
 .cache
 .tmp
 .idea/*
+**/.DS_Store
 !/.prettierignore
 !/.prettierrc.json
 !/.npmrc
