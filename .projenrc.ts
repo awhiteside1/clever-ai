@@ -1,12 +1,29 @@
 import { MonorepoTsProject } from "@aws/pdk/monorepo";
 import { javascript, Project } from "projen";
-import { PythonProject } from "projen/lib/python";
 import { NodePackageManager, NodeProject, TypescriptConfig, TypescriptConfigExtends } from "projen/lib/javascript";
+import { PythonProject } from "projen/lib/python";
 
 
 // @ts-ignore
 const monorepo = new MonorepoTsProject({
   devDeps: ["@aws/pdk"],
+  deps: [
+    "@headlessui/react",
+    "@headlessui/tailwindcss",
+    "@tailwindcss/forms",
+    "@types/node",
+    "@types/react",
+    "@types/react-dom",
+    "autoprefixer",
+    "clsx",
+    "framer-motion",
+    "next",
+    "react",
+    "react-dom",
+    "tailwindcss",
+    "typescript",
+    "use-debounce"
+  ],
   name: "clever-ai",
   packageManager: javascript.NodePackageManager.PNPM,
   pnpmVersion: "9",
@@ -86,6 +103,20 @@ const platform = new NodeProject({
   packageManager: NodePackageManager.PNPM,
   defaultReleaseBranch: "main"
 });
+
+const www = new NodeProject({
+  parent: monorepo,
+  jest: false,
+  npmignoreEnabled: false,
+  licensed: false,
+  gitignore: [".next/**"],
+  name: "www",
+  outdir: "apps/www",
+  packageManager: NodePackageManager.PNPM,
+  defaultReleaseBranch: "main"
+});
+
+www.addTask("dev", { exec: "pnpm next dev" });
 
 
 const setupTypescript = (project: NodeProject) => {
