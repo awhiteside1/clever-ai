@@ -75,6 +75,10 @@ importers:
         specifier: ^5.5.4
         version: 5.5.4
 
+  packages/framework: {}
+
+  packages/platform: {}
+
 packages:
 
   '@aws-cdk/asset-awscli-v1@2.2.202':

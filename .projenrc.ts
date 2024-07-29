@@ -1,8 +1,10 @@
 import { MonorepoTsProject } from "@aws/pdk/monorepo";
 import { javascript, Project } from "projen";
 import { PythonProject } from "projen/lib/python";
-import { NodePackageManager, NodeProject } from "projen/lib/javascript";
+import { NodePackageManager, NodeProject, TypescriptConfig, TypescriptConfigExtends } from "projen/lib/javascript";
 
+
+// @ts-ignore
 const monorepo = new MonorepoTsProject({
   devDeps: ["@aws/pdk"],
   name: "clever-ai",
@@ -24,7 +26,19 @@ const monorepo = new MonorepoTsProject({
   projenrcTs: true,
   gitignore: [".idea/*"],
   licenseOptions: { disableDefaultLicenses: true },
-  licensed: false
+  licensed: false,
+  tsconfig: {
+    compilerOptions: {
+      "outDir": "${configDir}/lib",
+      //@ts-ignore
+      "composite": true,
+      "incremental": true,
+      "declaration": true,
+      "declarationMap": true,
+      "customConditions": ["@workspace"]
+    },
+    "exclude": ["${configDir}/lib"]
+  }
 });
 
 monorepo.package.addEngine("pnpm", ">=9");
@@ -50,12 +64,51 @@ new Project({
   outdir: "docs"
 });
 
-new NodeProject({
+const framework = new NodeProject({
   parent: monorepo,
+  jest: false,
+  npmignoreEnabled: false,
+  licensed: false,
   name: "framework",
+  packageName: "@workspace/framework",
   outdir: "packages/framework",
   packageManager: NodePackageManager.PNPM,
   defaultReleaseBranch: "main"
 });
+
+const platform = new NodeProject({
+  parent: monorepo,
+  jest: false,
+  npmignoreEnabled: false,
+  licensed: false,
+  name: "platform",
+  outdir: "packages/platform",
+  packageManager: NodePackageManager.PNPM,
+  defaultReleaseBranch: "main"
+});
+
+
+const setupTypescript = (project: NodeProject) => {
+
+  project.package.file.addOverride("exports", {
+    "*": {
+      "import": {
+        "@workspace": "./src/index.ts", // must be first, order matters!
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "require": {
+        "@workspace/source": "./src/index.ts",
+        "default": "./lib/index.cjs",
+        "types": "./lib/index.d.ts"
+      }
+    }
+  });
+  new TypescriptConfig(project, { extends: TypescriptConfigExtends.fromPaths(["../../tsconfig.json"]) });
+
+};
+
+setupTypescript(framework);
+setupTypescript(platform);
 
 monorepo.synth();
