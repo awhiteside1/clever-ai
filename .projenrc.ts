@@ -1,52 +1,61 @@
-import { MonorepoTsProject } from '@aws/pdk/monorepo'
-import { javascript, Project } from 'projen'
-import { PythonProject } from 'projen/lib/python'
+import { MonorepoTsProject } from "@aws/pdk/monorepo";
+import { javascript, Project } from "projen";
+import { PythonProject } from "projen/lib/python";
+import { NodePackageManager, NodeProject } from "projen/lib/javascript";
 
 const monorepo = new MonorepoTsProject({
-  devDeps: ['@aws/pdk'],
-  name: 'clever-ai',
+  devDeps: ["@aws/pdk"],
+  name: "clever-ai",
   packageManager: javascript.NodePackageManager.PNPM,
-  pnpmVersion: '9',
+  pnpmVersion: "9",
   prettierOptions: {
     settings: { semi: false, singleQuote: true },
     ignoreFileOptions: {
       ignorePatterns: [
-        '**/.venv/**',
-        '**/project.json',
-        '**/nx.json',
-        '**/package.json',
-        '**/tsconfig*',
-        '.*',
-      ],
-    },
+        "**/.venv/**",
+        "**/project.json",
+        "**/nx.json",
+        "**/package.json",
+        "**/tsconfig*",
+        ".*"
+      ]
+    }
   },
   projenrcTs: true,
-  gitignore: ['.idea/*'],
+  gitignore: [".idea/*"],
   licenseOptions: { disableDefaultLicenses: true },
-  licensed: false,
-})
+  licensed: false
+});
 
-monorepo.package.addEngine('pnpm', '>=9')
+monorepo.package.addEngine("pnpm", ">=9");
 
 new PythonProject({
   parent: monorepo,
   venv: true,
   venvOptions: {
-    envdir: '.venv',
+    envdir: ".venv"
   },
-  authorEmail: 'admin@alexwhiteside.dev',
-  authorName: 'Alex Whiteside',
-  moduleName: 'clever-ai',
-  name: 'python',
-  outdir: 'packages/python',
-  version: '0.0.1',
-  deps: ['ollama', 'torch', 'transformers'],
-})
+  authorEmail: "admin@alexwhiteside.dev",
+  authorName: "Alex Whiteside",
+  moduleName: "clever-ai",
+  name: "python",
+  outdir: "packages/python",
+  version: "0.0.1",
+  deps: ["ollama", "torch", "transformers"]
+});
 
 new Project({
   parent: monorepo,
-  name: 'docs',
-  outdir: 'docs',
-})
+  name: "docs",
+  outdir: "docs"
+});
 
-monorepo.synth()
+new NodeProject({
+  parent: monorepo,
+  name: "framework",
+  outdir: "packages/framework",
+  packageManager: NodePackageManager.PNPM,
+  defaultReleaseBranch: "main"
+});
+
+monorepo.synth();
