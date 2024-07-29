@@ -27,6 +27,7 @@ const monorepo = new MonorepoTsProject({
   name: "clever-ai",
   packageManager: javascript.NodePackageManager.PNPM,
   pnpmVersion: "9",
+  eslint: false,
   prettierOptions: {
     settings: { semi: false, singleQuote: true },
     ignoreFileOptions: {
