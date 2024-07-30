@@ -32,7 +32,7 @@ jspm_packages/
 .idea/
 **/.DS_Store
 **/.next/
-apps/www/.env
+**/.env
 !/.prettierignore
 !/.prettierrc.json
 !/.npmrc

@@ -46,7 +46,7 @@ const monorepo = new MonorepoTsProject({
     }
   },
   projenrcTs: true,
-  gitignore: [".idea/", "**/.DS_Store", "**/.next/", ".env"],
+  gitignore: [".idea/", "**/.DS_Store", "**/.next/", "**/.env"],
   licenseOptions: { disableDefaultLicenses: true },
   licensed: false,
   tsconfig: {
