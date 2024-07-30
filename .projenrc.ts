@@ -1,7 +1,6 @@
 import { MonorepoTsProject } from "@aws/pdk/monorepo";
 import { javascript, Project } from "projen";
 import { NodePackageManager, NodeProject, TypescriptConfig, TypescriptConfigExtends } from "projen/lib/javascript";
-import { PythonProject } from "projen/lib/python";
 
 
 // @ts-ignore
@@ -61,23 +60,6 @@ const monorepo = new MonorepoTsProject({
     },
     "exclude": ["${configDir}/lib"]
   }
-});
-
-monorepo.package.addEngine("pnpm", ">=9");
-
-new PythonProject({
-  parent: monorepo,
-  venv: true,
-  venvOptions: {
-    envdir: ".venv"
-  },
-  authorEmail: "admin@alexwhiteside.dev",
-  authorName: "Alex Whiteside",
-  moduleName: "clever-ai",
-  name: "python",
-  outdir: "packages/python",
-  version: "0.0.1",
-  deps: ["ollama", "lancedb", "pandas"]
 });
 
 new Project({

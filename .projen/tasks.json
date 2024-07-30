@@ -133,7 +133,7 @@
       "name": "postinstall",
       "steps": [
         {
-          "exec": "pnpm exec nx run-many --target=install --output-style=stream --parallel=1 --nx-bail --projects=python"
+          "exec": "pnpm exec nx run-many --target=install --output-style=stream --parallel=1 --nx-bail --projects=knowledge"
         }
       ]
     },
@@ -196,11 +196,11 @@
       "description": "Upgrade dependencies in the monorepo for all affected projects",
       "steps": [
         {
-          "exec": "pnpm exec nx run-many --target=upgrade --output-style=stream --nx-bail --projects=python,docs",
+          "exec": "pnpm exec nx run-many --target=upgrade --output-style=stream --nx-bail --projects=knowledge,docs",
           "receiveArgs": true
         },
         {
-          "exec": "pnpm exec nx run-many --target=install --output-style=stream --nx-bail --projects=python",
+          "exec": "pnpm exec nx run-many --target=install --output-style=stream --nx-bail --projects=knowledge",
           "receiveArgs": true
         },
         {

@@ -1,0 +1,8 @@
+[project]
+name = "clever-ai"
+
+[tool.rye]
+virtual = true
+
+[tool.rye.workspace]
+members = ["packages/*"]
