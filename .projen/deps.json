@@ -127,6 +127,10 @@
       "type": "runtime"
     },
     {
+      "name": "radash",
+      "type": "runtime"
+    },
+    {
       "name": "react",
       "type": "runtime"
     },

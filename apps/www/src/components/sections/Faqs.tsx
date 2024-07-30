@@ -1,58 +1,46 @@
-import { Container } from "@/components/layouts/Container";
+import { Container } from '@/components/layouts/Container'
 
 const faqs = [
   [
     {
-      question: "How do I know the tips are good?",
-      answer:
-        "Our whole business depends on our tips being good, so it’s in our best interest that they are. The results of our customers speak for themselves, just trust us."
+      question: 'Why would I ask Clever instead of ChatGPT, Claude, etc?',
+      answer: (
+        <>
+          Chatbots that provide direct LLM access are general purpose and
+          intentionally bare-bones. While possible to use them for idea
+          generation, you would need to do many time consuming and repetitive
+          tasks: file uploading, thread organization and isolation, prompt
+          copy/paste, etc.
+          <br />
+          <br />
+          While LLMs appear very capable, it's important to remember that they
+          work by predicting the next token (word) over and over again until
+          they predict a terminator. They do not have any understanding of what
+          they emit and cannot perform actual reasoning or logic. Clever models
+          idea generation as hundreds of subtasks, which drastically improves
+          quality.
+        </>
+      ),
     },
     {
-      question: "Isn’t this insider trading?",
+      question: 'What data do you store? Is it secure?',
       answer:
-        "Yes exactly. But at scale! Historically you could only make insider trades with knowledge from your direct network. Pocket brings you insider trading tips from people you don’t even know."
+        'You control what Clever can use as context within a project by sharing folders or files with us. We never store copies of your data, and only access specific files if they are relevant to an active discussion. You can confirm this by checking the audit logs from your cloud storage provider. ',
     },
-    {
-      question: "But isn’t insider trading illegal?",
-      answer:
-        "Here’s the thing: you’re the one doing the insider trading, not us. We’re just giving you the tips and some tools to make trades. We’re not doing anything wrong here."
-    }
   ],
   [
     {
-      question: "Do the people giving you tips realize what they are doing?",
+      question: 'How can I improve the ideas I generate?',
       answer:
-        "Again I would argue this isn’t really our responsibility. People make their own choices. If they don’t research the consequences that’s on them, not on us."
+        'Clever generates ideas by extracting context from your project files, then evaluates them based on project criteria. You can see both of these features and their current knowledge in project settings in your account. ',
     },
     {
-      question: "Where is Pocket based?",
+      question: 'Is it free? How do you make money?',
       answer:
-        "Let’s just say it’s not somewhere where the SEC is going to find us."
+        'While in beta, clever is free with limits as we improve the product. There will eventually be a paid plan with high limits.  ',
     },
-    {
-      question: "Is there any age limit to trading on Pocket?",
-      answer:
-        "For our free plan, the age limit is based on the minimum age to trade in your country of residence. Our VIP plan uses advanced transaction anonymization though, so you can use that plan even if you’re 9 years old. Or a dog."
-    }
   ],
-  [
-    {
-      question: "How did you get this on the App Store?",
-      answer:
-        "Honestly we were surprised too, but eventually we found out that the app reviewer found the app so compelling they approved it just so they could use it themselves."
-    },
-    {
-      question: "How do I explain the money I withdraw from Pocket to the IRS?",
-      answer:
-        "This feels like one-hundred percent a you problem. Pocket is not responsible in any way for your tax returns."
-    },
-    {
-      question: "How do I become an insider?",
-      answer:
-        "Contact us with some details about your industry and the type of access you have to apply for an insider account. Once approved, we’ll send you a guide on collecting insider information without being detected at work."
-    }
-  ]
-];
+]
 
 export function Faqs() {
   return (
@@ -70,7 +58,7 @@ export function Faqs() {
             Frequently asked questions
           </h2>
           <p className="mt-2 text-lg text-gray-600">
-            If you have anything else you want to ask,{" "}
+            If you have anything else you want to ask,{' '}
             <a
               href="mailto:info@example.com"
               className="text-gray-900 underline"
@@ -101,5 +89,5 @@ export function Faqs() {
         </ul>
       </Container>
     </section>
-  );
+  )
 }

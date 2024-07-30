@@ -1,7 +1,14 @@
-resend.contacts.create({
-  email: 'steve.wozniak@gmail.com',
-  firstName: 'Steve',
-  lastName: 'Wozniak',
-  unsubscribed: false,
-  audienceId: '78261eea-8f8b-4381-83c6-79fa7120f1cf',
-})
+'use server'
+import { resend } from './client'
+import { Contact, AUDIENCES } from './types'
+
+export const createContact = async (contact: Contact) => {
+  const response = await resend.contacts.create({
+    ...contact,
+    unsubscribed: false,
+    audienceId: AUDIENCES.general,
+  })
+
+  if (response.error) throw response.error
+  return response.data
+}

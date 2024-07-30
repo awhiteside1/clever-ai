@@ -14,6 +14,7 @@ const monorepo = new MonorepoTsProject({
     "@types/node",
     "@types/react",
     "@types/react-dom",
+    "radash",
     "resend",
     "autoprefixer",
     "clsx",
