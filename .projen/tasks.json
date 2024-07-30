@@ -175,13 +175,13 @@
       },
       "steps": [
         {
-          "exec": "pnpm dlx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@aws/pdk,npm-check-updates,prettier,prettier-plugin-tailwindcss,ts-node,typescript,@headlessui/react,@headlessui/tailwindcss,@tailwindcss/forms,@types/node,@types/react,@types/react-dom,@vercel/analytics,autoprefixer,aws-cdk-lib,cdk-nag,clsx,framer-motion,next,react,react-dom,tailwindcss,use-debounce"
+          "exec": "pnpm dlx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@aws/pdk,npm-check-updates,prettier,prettier-plugin-tailwindcss,ts-node,typescript,@headlessui/react,@headlessui/tailwindcss,@tailwindcss/forms,@types/node,@types/react,@types/react-dom,@vercel/analytics,autoprefixer,aws-cdk-lib,cdk-nag,clsx,framer-motion,next,react,react-dom,resend,tailwindcss,use-debounce"
         },
         {
           "exec": "pnpm i --no-frozen-lockfile"
         },
         {
-          "exec": "pnpm update @aws/pdk @types/node constructs npm-check-updates nx prettier prettier-plugin-tailwindcss projen syncpack ts-node typescript @aws-cdk/aws-cognito-identitypool-alpha @headlessui/react @headlessui/tailwindcss @tailwindcss/forms @types/react @types/react-dom @vercel/analytics autoprefixer aws-cdk-lib cdk-nag clsx framer-motion next react react-dom tailwindcss use-debounce"
+          "exec": "pnpm update @aws/pdk @types/node constructs npm-check-updates nx prettier prettier-plugin-tailwindcss projen syncpack ts-node typescript @aws-cdk/aws-cognito-identitypool-alpha @headlessui/react @headlessui/tailwindcss @tailwindcss/forms @types/react @types/react-dom @vercel/analytics autoprefixer aws-cdk-lib cdk-nag clsx framer-motion next react react-dom resend tailwindcss use-debounce"
         },
         {
           "exec": "pnpm exec projen"

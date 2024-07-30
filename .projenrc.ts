@@ -14,6 +14,7 @@ const monorepo = new MonorepoTsProject({
     "@types/node",
     "@types/react",
     "@types/react-dom",
+    "resend",
     "autoprefixer",
     "clsx",
     "framer-motion",
@@ -44,7 +45,7 @@ const monorepo = new MonorepoTsProject({
     }
   },
   projenrcTs: true,
-  gitignore: [".idea/", "**/.DS_Store", "**/.next/"],
+  gitignore: [".idea/", "**/.DS_Store", "**/.next/", ".env"],
   licenseOptions: { disableDefaultLicenses: true },
   licensed: false,
   tsconfig: {
@@ -75,7 +76,7 @@ new PythonProject({
   name: "python",
   outdir: "packages/python",
   version: "0.0.1",
-  deps: ["ollama", "torch", "transformers"]
+  deps: ["ollama", "lancedb", "pandas"]
 });
 
 new Project({

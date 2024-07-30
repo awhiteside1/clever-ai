@@ -1,20 +1,20 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
+import Link from "next/link";
 import {
   Popover,
   PopoverButton,
   PopoverBackdrop,
-  PopoverPanel,
-} from '@headlessui/react'
-import { AnimatePresence, motion } from 'framer-motion'
+  PopoverPanel
+} from "@headlessui/react";
+import { AnimatePresence, motion } from "framer-motion";
 
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import { Logo } from '@/components/Logo'
-import { NavLinks } from '@/components/NavLinks'
+import { Button } from "@/components/ui/Button";
+import { Container } from "@/components/layouts/Container";
+import { Logo } from "@/components/ui/Logo";
+import { NavLinks } from "@/components/ui/NavLinks";
 
-function MenuIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function MenuIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
       <path
@@ -24,10 +24,10 @@ function MenuIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         strokeLinejoin="round"
       />
     </svg>
-  )
+  );
 }
 
-function ChevronUpIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function ChevronUpIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
       <path
@@ -37,14 +37,14 @@ function ChevronUpIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         strokeLinejoin="round"
       />
     </svg>
-  )
+  );
 }
 
 function MobileNavLink(
   props: Omit<
     React.ComponentPropsWithoutRef<typeof PopoverButton<typeof Link>>,
-    'as' | 'className'
-  >,
+    "as" | "className"
+  >
 ) {
   return (
     <PopoverButton
@@ -52,7 +52,7 @@ function MobileNavLink(
       className="block text-base leading-7 tracking-tight text-gray-700"
       {...props}
     />
-  )
+  );
 }
 
 export function Header() {
@@ -103,7 +103,7 @@ export function Header() {
                           exit={{
                             opacity: 0,
                             y: -32,
-                            transition: { duration: 0.2 },
+                            transition: { duration: 0.2 }
                           }}
                           className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pb-6 pt-32 shadow-2xl shadow-gray-900/20"
                         >
@@ -142,5 +142,5 @@ export function Header() {
         </Container>
       </nav>
     </header>
-  )
+  );
 }

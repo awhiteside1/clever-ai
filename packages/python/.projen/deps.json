@@ -1,15 +1,15 @@
 {
   "dependencies": [
     {
+      "name": "lancedb",
+      "type": "runtime"
+    },
+    {
       "name": "ollama",
       "type": "runtime"
     },
     {
-      "name": "torch",
-      "type": "runtime"
-    },
-    {
-      "name": "transformers",
+      "name": "pandas",
       "type": "runtime"
     },
     {

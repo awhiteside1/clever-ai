@@ -135,6 +135,10 @@
       "type": "runtime"
     },
     {
+      "name": "resend",
+      "type": "runtime"
+    },
+    {
       "name": "tailwindcss",
       "type": "runtime"
     },
