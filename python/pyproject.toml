@@ -1,5 +1,7 @@
 [project]
 name = "clever-ai"
+dependencies = [
+]
 
 [tool.rye]
 virtual = true
