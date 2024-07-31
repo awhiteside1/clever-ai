@@ -1,5 +1,6 @@
 declare module '@registry' {
   interface Events {
-    factCreated: { name: string; confidence: number }
+    ping: { timestamp: number }
+    messageReceived: { message: string }
   }
 }

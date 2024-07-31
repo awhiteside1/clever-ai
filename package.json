@@ -10,7 +10,6 @@
     "package": "pnpm exec projen package",
     "post-compile": "pnpm exec projen post-compile",
     "post-upgrade": "pnpm exec projen post-upgrade",
-    "postinstall": "pnpm exec projen postinstall",
     "pre-compile": "pnpm exec projen pre-compile",
     "run-many": "pnpm exec projen run-many",
     "test": "pnpm exec projen test",
@@ -57,7 +56,8 @@
     "resend": "^3.5.0",
     "tailwindcss": "^3.4.7",
     "typescript": "^5.5.4",
-    "use-debounce": "^10.0.2"
+    "use-debounce": "^10.0.2",
+    "vitest": "^2.0.4"
   },
   "pnpm": {
     "overrides": {
@@ -65,10 +65,6 @@
       "@zkochan/js-yaml": "npm:js-yaml@4.1.0",
       "wrap-ansi": "^7.0.0"
     }
-  },
-  "engines": {
-    "node": ">=16",
-    "pnpm": ">=9"
   },
   "main": "lib/index.js",
   "license": "UNLICENSED",

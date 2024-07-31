@@ -1,6 +1,6 @@
 import { MonorepoTsProject } from "@aws/pdk/monorepo";
 import { javascript, Project } from "projen";
-import { NodePackageManager, NodeProject, TypescriptConfig, TypescriptConfigExtends } from "projen/lib/javascript";
+import { NodePackageManager, NodeProject, TypescriptConfig, TypescriptConfigExtends, TypeScriptModuleResolution } from "projen/lib/javascript";
 
 
 // @ts-ignore
@@ -20,6 +20,7 @@ const monorepo = new MonorepoTsProject({
     "framer-motion",
     "next",
     "react",
+    "vitest",
     "@vercel/analytics",
     "@vercel/analytics",
     "react-dom",
@@ -29,7 +30,8 @@ const monorepo = new MonorepoTsProject({
   ],
   name: "clever-ai",
   packageManager: javascript.NodePackageManager.PNPM,
-  pnpmVersion: "9",
+  projenCommand: "npx tsx .projenrc.ts",
+  pnpmVersion: ">=9",
   eslint: false,
   prettierOptions: {
     settings: { semi: false, singleQuote: true },
@@ -56,12 +58,15 @@ const monorepo = new MonorepoTsProject({
       "incremental": true,
       "declaration": true,
       "declarationMap": true,
+      "moduleResolution": TypeScriptModuleResolution.BUNDLER,
       "customConditions": ["@workspace"],
-      "rootDir": "./", "module": "esnext"
+      "rootDir": "./", "module": "ESNEXT"
     },
     "exclude": ["${configDir}/lib"]
   }
 });
+
+monorepo.package.file.addDeletionOverride("engines");
 
 new Project({
   parent: monorepo,

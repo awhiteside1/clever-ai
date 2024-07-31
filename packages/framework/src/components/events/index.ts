@@ -1,7 +1,9 @@
 import { EventAPI, Service } from './types'
 import { uid } from 'radash'
+import { Participant } from '../../participant/type'
+import { Events } from '@registry'
 
-class EventBus {
+export class EventBus {
   private subscriptions: Record<
     string,
     {
@@ -20,7 +22,23 @@ class EventBus {
       })
   }
 
-  registerService(service: Service): EventAPI {
+  subscribe<T extends keyof Events>(
+    service: Service,
+    name: T,
+    callback: (event: Events[T]) => void,
+  ) {
+    const id = uid(10)
+    Object.assign(this.subscriptions, {
+      [id]: { event: name, callback, service, id },
+    })
+    return {
+      unsubscribe: () => {
+        delete this.subscriptions[id]
+      },
+    }
+  }
+
+  registerService(service: Participant): EventAPI {
     return {
       report: (name, event) => {
         if (event) {
@@ -28,15 +46,7 @@ class EventBus {
         }
       },
       subscribe: (name, callback) => {
-        const id = uid(10)
-        Object.assign(this.subscriptions, {
-          id: { event: name, callback, service, id },
-        })
-        return {
-          unsubscribe: () => {
-            delete this.subscriptions[id]
-          },
-        }
+        return this.subscribe(service, name, callback)
       },
     }
   }

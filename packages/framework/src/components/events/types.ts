@@ -12,7 +12,6 @@ type Report = <Name extends keyof Events>(
 
 export interface EventAPI {
   report: Report
-
   subscribe: Subscription
 }
 
