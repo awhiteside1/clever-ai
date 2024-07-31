@@ -56,7 +56,8 @@ const monorepo = new MonorepoTsProject({
       "incremental": true,
       "declaration": true,
       "declarationMap": true,
-      "customConditions": ["@workspace"]
+      "customConditions": ["@workspace"],
+      "rootDir": "./", "module": "esnext"
     },
     "exclude": ["${configDir}/lib"]
   }
