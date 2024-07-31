@@ -13,6 +13,10 @@ interface DiscussionProps<
   components: T
 }
 
+/**
+ * A Discussion provides the runtime construct for many independent {@Link|Participants} to contribute to a goal, across many requests.
+ *
+ */
 export class Discussion<
   const T extends Record<string, { new (props: ServiceProps): Service }>,
 > {
