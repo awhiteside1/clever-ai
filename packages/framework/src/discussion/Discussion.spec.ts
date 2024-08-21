@@ -1,6 +1,7 @@
 import { Discussion } from './Discussion'
 import { FactAPI } from '../components/facts'
 import { LoggerParticipant } from '../participant/LoggerParticipant'
+import { Project } from '../model'
 
 describe('Discussion', () => {
   it('should work', () => {

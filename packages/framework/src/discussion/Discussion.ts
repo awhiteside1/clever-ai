@@ -1,8 +1,9 @@
 import EventEmitter from 'node:events'
 import { EventBus } from '../components/events'
-import { Service, ServiceProps } from '../components/types'
+import { Service, ServiceProps } from '../components/Service'
 import { mapValues, uid } from 'radash'
 import { Participant } from '../participant/type'
+import { Project } from '../model'
 
 const debug = console.debug
 

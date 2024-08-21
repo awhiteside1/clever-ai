@@ -1,4 +1,4 @@
-import { Service } from "../components/types";
+import { Service } from "../components/Service";
 import { EventAPI } from "../components/events/types";
 
 /**

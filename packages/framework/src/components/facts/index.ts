@@ -1,6 +1,6 @@
 import { uid } from 'radash'
 import { Fact } from './types'
-import { Service, ServiceProps } from '../types'
+import { Service, ServiceProps } from '../Service'
 
 export class FactAPI extends Service {
   name = 'facts'

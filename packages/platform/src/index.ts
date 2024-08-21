@@ -1,1 +1,1 @@
-import { Framework } from '@workspace'
+export { Framework } from '@workspace'
